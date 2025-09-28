@@ -27,64 +27,23 @@
     <canvas id="aurora-canvas"></canvas>
     <canvas id="fluid-canvas"></canvas>
 
+    <header class="page-element px-4 sm:px-8 py-4 fixed top-0 left-0 w-full z-50">
+        <nav class="flex justify-between items-center gap-4">
+            <a href="#" id="nav-brand" class="text-xl sm:text-2xl font-bold tracking-tighter z-50 flex-shrink-0">Tarciso Ferreira</a>
+            
+            <div id="desktop-nav-links" class="flex items-center overflow-x-auto whitespace-nowrap space-x-4 sm:space-x-6 nav-scroll-container">
+                <a href="#sobre" class="nav-link-scroll text-sm sm:text-base text-gray-300 hover:text-white transition-colors flex-shrink-0">Sobre</a>
+                <a href="#tecnologias" class="nav-link-scroll text-sm sm:text-base text-gray-300 hover:text-white transition-colors flex-shrink-0">Tecnologias</a>
+                <a href="#certificados" class="nav-link-scroll text-sm sm:text-base text-gray-300 hover:text-white transition-colors flex-shrink-0">Certificados</a>
+                <a href="#projetos" class="nav-link-scroll text-sm sm:text-base text-gray-300 hover:text-white transition-colors flex-shrink-0">Projetos</a>
+                <a href="#artigos" class="nav-link-scroll text-sm sm:text-base text-gray-300 hover:text-white transition-colors flex-shrink-0">Artigos</a>
+                <a href="#contato" class="nav-link-scroll text-sm sm:text-base bg-blue-600 text-white px-3 sm:px-4 py-2 rounded-md font-bold hover:bg-blue-700 transition-colors flex-shrink-0">Contato</a>
+            </div>
+        </nav>
+    </header>
+
     <div id="main-content">
         <div class="content-wrapper pb-20">
-            <div id="menu-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
-
-            <header class="page-element px-4 sm:px-8 py-4 fixed top-0 left-0 w-full z-50">
-                <nav class="flex justify-between items-center">
-                    <a href="#" id="nav-brand" class="text-xl sm:text-2xl font-bold tracking-tighter z-50">Tarciso Ferreira</a>
-                    <div id="nav-right-container">
-                        <div id="home-nav-controls">
-                            <button id="hamburger-btn" class="md:hidden z-50 text-white w-8 h-8 flex flex-col justify-center items-center gap-[5px]">
-                                <span class="block w-6 h-0.5 bg-white"></span>
-                                <span class="block w-6 h-0.5 bg-white"></span>
-                                <span class="block w-6 h-0.5 bg-white"></span>
-                            </button>
-                           <div id="desktop-nav-links" class="hidden md:flex items-center space-x-3 sm:space-x-6">
-                               <a href="#sobre" class="nav-link-scroll text-sm sm:text-base text-gray-300 hover:text-white transition-colors">Sobre</a>
-                               <a href="#tecnologias" class="nav-link-scroll text-sm sm:text-base text-gray-300 hover:text-white transition-colors">Tecnologias</a>
-                               <a href="#certificados" class="nav-link-scroll text-sm sm:text-base text-gray-300 hover:text-white transition-colors">Certificados</a>
-                               <a href="#projetos" class="nav-link-scroll text-sm sm:text-base text-gray-300 hover:text-white transition-colors">Projetos</a>
-                               <a href="#artigos" class="nav-link-scroll text-sm sm:text-base text-gray-300 hover:text-white transition-colors">Artigos</a>
-                               <a href="#contato" class="nav-link-scroll text-sm sm:text-base bg-blue-600 text-white px-3 sm:px-4 py-2 rounded-md font-bold hover:bg-blue-700 transition-colors">Contato</a>
-                           </div>    
-                        </div>
-                    </div>
-                </nav>
-            </header>
-            
-            <div id="main-nav" class="fixed top-0 right-0 h-full w-full max-w-xs bg-slate-900/90 backdrop-blur-xl z-40 transform translate-x-full">
-                <div class="flex flex-col h-full w-full pt-24 px-8 space-y-2">
-                    <span class="px-4 pb-4 text-sm font-semibold text-gray-400 tracking-wider">MENU</span>
-                    <a href="#sobre" class="mobile-nav-link nav-link-scroll flex items-center gap-4 text-xl text-gray-200 hover:text-white p-4 rounded-lg hover:bg-white/10 transition-all duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                        <span>Sobre</span>
-                    </a>
-                    <a href="#tecnologias" class="mobile-nav-link nav-link-scroll flex items-center gap-4 text-xl text-gray-200 hover:text-white p-4 rounded-lg hover:bg-white/10 transition-all duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M12 8V4H8"/><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M12 12v4h4"/></svg>
-                        <span>Tecnologias</span>
-                    </a>
-                    <a href="#certificados" class="mobile-nav-link nav-link-scroll flex items-center gap-4 text-xl text-gray-200 hover:text-white p-4 rounded-lg hover:bg-white/10 transition-all duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M15.232 5.232a3 3 0 0 1 4.243 4.243L12 17l-7.475-7.475a3 3 0 0 1 4.243-4.243L12 7l3.232-1.768z"/><path d="m12 17-1.5-1.5"/></svg>
-                        <span>Certificados</span>
-                    </a>
-                    <a href="#projetos" class="mobile-nav-link nav-link-scroll flex items-center gap-4 text-xl text-gray-200 hover:text-white p-4 rounded-lg hover:bg-white/10 transition-all duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                        <span>Projetos</span>
-                    </a>
-                    <a href="#artigos" class="mobile-nav-link nav-link-scroll flex items-center gap-4 text-xl text-gray-200 hover:text-white p-4 rounded-lg hover:bg-white/10 transition-all duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                        <span>Artigos</span>
-                    </a>
-                    <div class="border-t border-white/10 my-4"></div>
-                    <a href="#contato" class="mobile-nav-link nav-link-scroll flex items-center justify-center gap-3 bg-blue-600 text-white px-6 py-4 rounded-lg font-bold hover:bg-blue-700 transition-colors text-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                        <span>Contato</span>
-                    </a>
-                </div>
-            </div>
-
             <main id="page-content">
                 <section id="home" class="flex flex-col justify-center px-4 sm:px-8 pt-32 pb-16 md:min-h-screen md:pt-10 md:pb-0">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -120,10 +79,10 @@
                     </div>
                 </section>
                 
-                <section id="tecnologias" class="w-full reveal flex flex-col justify-center min-h-[300px] sm:min-h-[400px] py-16 sm:py-0">
+                <section id="tecnologias" class="w-full reveal flex flex-col justify-center min-h-[300px] sm:min-h-[400px] py-16 sm:py-0 overflow-hidden">
                     <div class="max-w-7xl mx-auto text-center px-4 sm:px-8">
                         <h2 class="text-3xl sm:text-4xl font-bold mb-12"><span class="text-gradient">Tecnologias</span></h2>
-                        <div id="tech-logo-loop" class="relative overflow-hidden">
+                        <div id="tech-logo-loop" class="relative">
                         </div>
                     </div>
                 </section>
@@ -196,7 +155,7 @@
         </div>
     </div>
 
-    <footer id="page-footer" class="py-3 bg-black border-t border-gray-800 overflow-hidden">
+    <footer id="page-footer" class="py-3 bg-black border-t border-gray-800">
         <div class="flex whitespace-nowrap">
             <div class="marquee-content flex-shrink-0 flex items-center pr-8 text-xs sm:text-sm">
                 <span class="mx-4 text-gray-400">Desenvolvedor Front-end</span><span class="text-blue-500 mx-2">•</span>
@@ -213,7 +172,7 @@
                 <span class="mx-4 text-gray-400">Especialista em UI/UX</span><span class="text-blue-500 mx-2">•</span>
                 <span class="mx-4 text-gray-400">React & TypeScript</span><span class="text-blue-500 mx-2">•</span>
                 <span class="mx-4 text-gray-400">Criando Experiências Digitais Inovadoras</span><span class="text-blue-500 mx-2">•</span>
-                <span class="mx-4 text-gray-400">.NET & C#</span><span class="text-blue-500 mx-2">•</span>
+                <span class="mx-4 text-gray-400">.NET & C#</span><text-blue-500 mx-2">•</span>
                 <span class="mx-4 text-gray-400">Pronto para o Próximo Desafio</span><span class="text-blue-500 mx-2">•</span>
             </div>
         </div>

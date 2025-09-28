@@ -118,24 +118,14 @@ header {
     box-shadow: 0 0 15px rgba(59, 130, 246, 0.4), 0 0 30px rgba(59, 130, 246, 0.2);
 }
 
-#hamburger-btn span {
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    transform-origin: center;
+/* Estiliza a barra de rolagem do novo menu mobile */
+.nav-scroll-container::-webkit-scrollbar {
+    height: 2px;
 }
-#hamburger-btn.is-active span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+.nav-scroll-container::-webkit-scrollbar-thumb {
+    background-color: rgba(59, 130, 246, 0.5);
 }
-#hamburger-btn.is-active span:nth-child(2) {
-    opacity: 0;
-    transform: translateX(-20px);
-}
-#hamburger-btn.is-active span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-}
-.mobile-nav-link {
-    transform: translateX(30px);
-    opacity: 0;
-}
+
 
 @keyframes gradient {
   0% { background-position: 0% 50%; }
@@ -284,7 +274,6 @@ header {
     --animation-speed: 40s;
     --gap: 4rem;
     --logo-height: 100px;
-
     height: calc(var(--logo-height) * 1.5);
     display: flex;
     align-items: center;
@@ -328,7 +317,7 @@ header {
     }
 }
 
-/* ADICIONADO PARA O RODAPÉ FIXO */
+/* Torna o rodapé fixo e sempre visível */
 #page-footer {
     position: fixed;
     bottom: 0;
