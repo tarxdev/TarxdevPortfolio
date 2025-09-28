@@ -279,16 +279,58 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- LÓGICA DE ROLAGEM SUAVE DOS LINKS ---
-    document.querySelectorAll('.nav-link-scroll').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetElement = document.querySelector(link.getAttribute('href'));
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth' });
+    // --- LÓGICA DO MENU HAMBÚRGUER RESTAURADA ---
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mainNav = document.getElementById('main-nav');
+    const menuOverlay = document.getElementById('menu-overlay');
+    if (hamburgerBtn && mainNav && menuOverlay) {
+        const body = document.body;
+        function toggleMenu(callback) {
+            const isMenuOpen = hamburgerBtn.classList.contains('is-active');
+            const tl = gsap.timeline({
+                defaults: { ease: 'power3.inOut' },
+                onComplete: () => { if (typeof callback === 'function') { callback(); } }
+            });
+
+            if (isMenuOpen) {
+                tl.to('.mobile-nav-link', { opacity: 0, x: 30, duration: 0.3, stagger: 0.05 })
+                .to(mainNav, { x: '100%', duration: 0.4 }, "-=0.2")
+                .to(menuOverlay, { opacity: 0, duration: 0.4 }, "<")
+                .call(() => {
+                    mainNav.classList.add('translate-x-full');
+                    gsap.set(mainNav, { clearProps: 'transform' });
+                    menuOverlay.classList.add('pointer-events-none');
+                    hamburgerBtn.classList.remove('is-active');
+                    body.classList.remove('menu-open');
+                });
+            } else {
+                body.classList.add('menu-open');
+                hamburgerBtn.classList.add('is-active');
+                mainNav.classList.remove('translate-x-full');
+                menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                tl.to(menuOverlay, { opacity: 1, duration: 0.4 })
+                .fromTo(mainNav, { x: '100%' }, { x: '0%', duration: 0.4 }, "<")
+                .to('.mobile-nav-link', { opacity: 1, x: 0, duration: 0.4, stagger: 0.08 });
             }
+        }
+        hamburgerBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleMenu(); });
+        menuOverlay.addEventListener('click', () => toggleMenu());
+        document.querySelectorAll('.nav-link-scroll').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const isMobileClick = window.innerWidth < 768 && mainNav.contains(link);
+                const navigateAction = () => {
+                    const targetElement = document.querySelector(link.getAttribute('href'));
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                };
+                if (isMobileClick && hamburgerBtn.classList.contains('is-active')) {
+                    toggleMenu(navigateAction);
+                } else { navigateAction(); }
+            });
         });
-    });
+    }
     
     // --- LÓGICA PARA GERAR OS GRIDS DE CARDS ---
     const galleryCerts = document.getElementById('gallery-container-certs');
