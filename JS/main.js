@@ -203,20 +203,20 @@ const allArticles = [
 ];
 
 const allTechLogos = [
-  { src: "img/logos/react.png", alt: "React Native" },
-  { src: "img/logos/angular.png", alt: "Angular" },
-  { src: "img/logos/typescript.png", alt: "TypeScript" },
-  { src: "img/logos/vue.png", alt: "Vue" },
-  { src: "img/logos/js.png", alt: "JavaScript" },
-  { src: "img/logos/html.png", alt: "HTML5" },
-  { src: "img/logos/css.png", alt: "CSS3" },
-  { src: "img/logos/react.png", alt: "React Native" },
-  { src: "img/logos/angular.png", alt: "Angular" },
-  { src: "img/logos/typescript.png", alt: "TypeScript" },
-  { src: "img/logos/vue.png", alt: "Vue" },
-  { src: "img/logos/js.png", alt: "JavaScript" },
-  { src: "img/logos/html.png", alt: "HTML5" },
-  { src: "img/logos/css.png", alt: "CSS3" },
+  { src: "img/react.png", alt: "React Native" },
+  { src: "img/angular.png", alt: "Angular" },
+  { src: "img/typescript.png", alt: "TypeScript" },
+  { src: "img/vue.png", alt: "Vue" },
+  { src: "img/js.png", alt: "JavaScript" },
+  { src: "img/html.png", alt: "HTML5" },
+  { src: "img/css.png", alt: "CSS3" },
+  { src: "img/react.png", alt: "React Native" },
+  { src: "img/angular.png", alt: "Angular" },
+  { src: "img/typescript.png", alt: "TypeScript" },
+  { src: "img/vue.png", alt: "Vue" },
+  { src: "img/js.png", alt: "JavaScript" },
+  { src: "img/html.png", alt: "HTML5" },
+  { src: "img/css.png", alt: "CSS3" },
 ];
 
 // --- FUNÇÕES DE GERAÇÃO DE CONTEÚDO ---
