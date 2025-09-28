@@ -8,13 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-black page-transition">
 
     <audio id="background-audio" loop>
-        <source src="audio/interstellar .mp3" type="audio/mpeg">
+        <source src="audio/interstellar.mp3" type="audio/mpeg">
         Seu navegador não suporta o elemento de áudio.
     </audio>
 
@@ -29,13 +28,12 @@
     <canvas id="fluid-canvas"></canvas>
 
     <div id="main-content">
-        <div class="content-wrapper">
+        <div class="content-wrapper pb-20">
             <div id="menu-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
 
-            <header class="page-element px-4 sm:px-8 py-4 sm:py-4 fixed top-0 left-0 w-full z-50">
+            <header class="page-element px-4 sm:px-8 py-4 fixed top-0 left-0 w-full z-50">
                 <nav class="flex justify-between items-center">
                     <a href="#" id="nav-brand" class="text-xl sm:text-2xl font-bold tracking-tighter z-50">Tarciso Ferreira</a>
-                    
                     <div id="nav-right-container">
                         <div id="home-nav-controls">
                             <button id="hamburger-btn" class="md:hidden z-50 text-white w-8 h-8 flex flex-col justify-center items-center gap-[5px]">
@@ -43,7 +41,6 @@
                                 <span class="block w-6 h-0.5 bg-white"></span>
                                 <span class="block w-6 h-0.5 bg-white"></span>
                             </button>
-                                                       
                            <div id="desktop-nav-links" class="hidden md:flex items-center space-x-3 sm:space-x-6">
                                <a href="#sobre" class="nav-link-scroll text-sm sm:text-base text-gray-300 hover:text-white transition-colors">Sobre</a>
                                <a href="#tecnologias" class="nav-link-scroll text-sm sm:text-base text-gray-300 hover:text-white transition-colors">Tecnologias</a>
@@ -88,11 +85,11 @@
                 </div>
             </div>
 
-            <div id="home-page" class="page-content">
-                <main class="flex flex-col justify-center px-4 sm:px-8 pt-32 pb-16 md:min-h-screen md:pt-10 md:pb-0">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <main id="page-content">
+                <section id="home" class="flex flex-col justify-center px-4 sm:px-8 pt-32 pb-16 md:min-h-screen md:pt-10 md:pb-0">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                         <div class="text-center md:text-left">
-                            <h1 class="text-6xl sm:text-7xl lg:text-8xl font-black tracking-tighter leading-none">
+                            <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none">
                                 TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL.
                             </h1>
                             <div class="mt-12 flex justify-center md:justify-start">
@@ -103,7 +100,7 @@
                         </div>
                         <div class="space-y-6 text-center md:text-left">
                              <div class="p-6 rounded-lg border border-blue-500/30 card-base">
-                                <h2 class="text-2xl font-bold">Olá! Eu sou Tarciso.</h2>
+                                <h2 class="text-xl sm:text-2xl font-bold">Olá! Eu sou Tarciso.</h2>
                                 <p class="mt-2 text-gray-300">
                                     Um desenvolvedor e designer apaixonado por criar experiências web interativas e memoráveis.
                                 </p>
@@ -114,49 +111,49 @@
                             </div>
                         </div>
                     </div>
-                </main>
+                </section>
 
-                <section id="sobre" class="py-16 sm:py-24 flex items-center justify-center reveal">
-                    <div class="max-w-3xl text-center px-4">
-                        <h2 class="text-4xl font-bold mb-4"><span class="text-gradient">Sobre Mim</span></h2>
-                        <p class="text-lg text-gray-300 text-center sm:text-left">Como um desenvolvedor focado em front-end, minha missão é transformar ideias complexas em realidade digital. Utilizo tecnologias como React, TypeScript e JavaScript moderno para construir interfaces interativas e memoráveis, sempre com atenção aos detalhes de UI/UX para criar uma jornada de usuário coesa e agradável.</p>
+                <section id="sobre" class="py-16 sm:py-24 flex items-center justify-center reveal px-4 sm:px-8">
+                    <div class="max-w-3xl text-center">
+                        <h2 class="text-3xl sm:text-4xl font-bold mb-4"><span class="text-gradient">Sobre Mim</span></h2>
+                        <p class="text-base sm:text-lg text-gray-300">Como um desenvolvedor focado em front-end, minha missão é transformar ideias complexas em realidade digital. Utilizo tecnologias como React, TypeScript e JavaScript moderno para construir interfaces interativas e memoráveis, sempre com atenção aos detalhes de UI/UX para criar uma jornada de usuário coesa e agradável.</p>
                     </div>
                 </section>
                 
-                <section id="tecnologias" class="w-full reveal flex flex-col justify-center min-h-[400px]">
-                    <div class="max-w-7xl mx-auto text-center">
-                        <h2 class="text-3xl font-bold mb-12"><span class="text-gradient">Tecnologias</span></h2>
+                <section id="tecnologias" class="w-full reveal flex flex-col justify-center min-h-[300px] sm:min-h-[400px] py-16 sm:py-0">
+                    <div class="max-w-7xl mx-auto text-center px-4 sm:px-8">
+                        <h2 class="text-3xl sm:text-4xl font-bold mb-12"><span class="text-gradient">Tecnologias</span></h2>
                         <div id="tech-logo-loop" class="relative overflow-hidden">
                         </div>
                     </div>
                 </section>
 
                 <section id="certificados" class="py-16 sm:py-24 w-full reveal">
-                    <div class="max-w-7xl mx-auto text-center px-4">
-                        <h2 class="text-4xl font-bold mb-12"><span class="text-gradient">Certificados em Destaque</span></h2>
+                    <div class="max-w-7xl mx-auto text-center px-4 sm:px-8">
+                        <h2 class="text-3xl sm:text-4xl font-bold mb-12"><span class="text-gradient">Certificados em Destaque</span></h2>
                         <div id="gallery-container-certs" class="card-grid"></div>
                     </div>
                 </section>
                 
                 <section id="projetos" class="py-16 sm:py-24 w-full reveal">
-                    <div class="max-w-7xl mx-auto text-center px-4">
-                        <h2 class="text-4xl font-bold mb-12"><span class="text-gradient">Projetos em Destaque</span></h2>
+                    <div class="max-w-7xl mx-auto text-center px-4 sm:px-8">
+                        <h2 class="text-3xl sm:text-4xl font-bold mb-12"><span class="text-gradient">Projetos em Destaque</span></h2>
                         <div id="gallery-container-projs" class="card-grid"></div>
                     </div>
                 </section>
                 
                 <section id="artigos" class="py-16 sm:py-24 w-full reveal">
-                    <div class="max-w-7xl mx-auto text-center px-4">
-                        <h2 class="text-4xl font-bold mb-12"><span class="text-gradient">Artigos em Destaque</span></h2>
+                    <div class="max-w-7xl mx-auto text-center px-4 sm:px-8">
+                        <h2 class="text-3xl sm:text-4xl font-bold mb-12"><span class="text-gradient">Artigos em Destaque</span></h2>
                         <div id="gallery-container-arts" class="card-grid"></div>
                     </div>
                 </section>
 
-                <section id="contato" class="py-16 sm:py-24 p-4 sm:p-8 flex items-center justify-center reveal">
-                    <div class="max-w-xl w-full card-base rounded-2xl p-8 sm:p-12">
+                <section id="contato" class="py-16 sm:py-24 px-4 sm:px-8 flex items-center justify-center reveal">
+                    <div class="max-w-xl w-full card-base rounded-2xl p-6 sm:p-12">
                         <div class="text-center">
-                            <h2 class="text-4xl font-bold mb-4"><span class="text-gradient">Vamos Conversar</span></h2>
-                            <p class="text-lg text-gray-300 mb-8">
+                            <h2 class="text-3xl sm:text-4xl font-bold mb-4"><span class="text-gradient">Vamos Conversar</span></h2>
+                            <p class="text-base sm:text-lg text-gray-300 mb-8">
                                 Tem um projeto em mente ou quer se conectar? Preencha o formulário abaixo ou me encontre nas redes sociais.
                             </p>
                         </div>
@@ -174,7 +171,7 @@
                                 <textarea id="message" name="message" rows="4" required></textarea>
                             </div>
                             <div class="text-center pt-4">
-                                 <button type="submit" id="submit-btn" class="gradient-btn font-bold text-xl w-full sm:w-auto">
+                                 <button type="submit" id="submit-btn" class="gradient-btn font-bold text-lg sm:text-xl w-full sm:w-auto">
                                     <span class="submit-text">Enviar Mensagem</span>
                                  </button>
                             </div>
@@ -185,44 +182,44 @@
                         <div class="mt-12 text-center">
                             <p class="text-gray-400 mb-4">Ou me encontre aqui:</p>
                             <div class="flex justify-center gap-6 social-links">
-                                <a href="#" target="_blank" aria-label="GitHub">
+                                <a href="#" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                                 </a>
-                                <a href="#" target="_blank" aria-label="LinkedIn">
+                                <a href="#" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </section>
-            </div>
-
-            <footer id="page-footer" class="fixed bottom-0 left-0 w-full bg-black py-3 border-t border-gray-800 overflow-hidden">
-                <div class="flex whitespace-nowrap">
-                    <div class="marquee-content flex-shrink-0 flex items-center pr-8">
-                        <span class="mx-4 text-gray-400">Desenvolvedor Front-end</span><span class="text-blue-500 mx-2">•</span>
-                        <span class="mx-4 text-gray-400">Soluções Criativas com Código e Design</span><span class="text-blue-500 mx-2">•</span>
-                        <span class="mx-4 text-gray-400">Especialista em UI/UX</span><span class="text-blue-500 mx-2">•</span>
-                        <span class="mx-4 text-gray-400">React & TypeScript</span><span class="text-blue-500 mx-2">•</span>
-                        <span class="mx-4 text-gray-400">Criando Experiências Digitais Inovadoras</span><span class="text-blue-500 mx-2">•</span>
-                        <span class="mx-4 text-gray-400">.NET & C#</span><span class="text-blue-500 mx-2">•</span>
-                        <span class="mx-4 text-gray-400">Pronto para o Próximo Desafio</span><span class="text-blue-500 mx-2">•</span>
-                    </div>
-                    <div class="marquee-content flex-shrink-0 flex items-center pr-8" aria-hidden="true">
-                        <span class="mx-4 text-gray-400">Desenvolvedor Front-end</span><span class="text-blue-500 mx-2">•</span>
-                        <span class="mx-4 text-gray-400">Soluções Criativas com Código e Design</span><span class="text-blue-500 mx-2">•</span>
-                        <span class="mx-4 text-gray-400">Especialista em UI/UX</span><span class="text-blue-500 mx-2">•</span>
-                        <span class="mx-4 text-gray-400">React & TypeScript</span><span class="text-blue-500 mx-2">•</span>
-                        <span class="mx-4 text-gray-400">Criando Experiências Digitais Inovadoras</span><span class="text-blue-500 mx-2">•</span>
-                        <span class="mx-4 text-gray-400">.NET & C#</span><span class="text-blue-500 mx-2">•</span>
-                        <span class="mx-4 text-gray-400">Pronto para o Próximo Desafio</span><span class="text-blue-500 mx-2">•</span>
-                    </div>
-                </div>
-            </footer>
+            </main>
         </div>
     </div>
 
-    <button id="music-toggle-btn" class="fixed bottom-16 right-5 z-50 w-12 h-12 bg-gray-800/50 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-gray-700/70 transition-colors">
+    <footer id="page-footer" class="py-3 bg-black border-t border-gray-800 overflow-hidden">
+        <div class="flex whitespace-nowrap">
+            <div class="marquee-content flex-shrink-0 flex items-center pr-8 text-xs sm:text-sm">
+                <span class="mx-4 text-gray-400">Desenvolvedor Front-end</span><span class="text-blue-500 mx-2">•</span>
+                <span class="mx-4 text-gray-400">Soluções Criativas com Código e Design</span><span class="text-blue-500 mx-2">•</span>
+                <span class="mx-4 text-gray-400">Especialista em UI/UX</span><span class="text-blue-500 mx-2">•</span>
+                <span class="mx-4 text-gray-400">React & TypeScript</span><span class="text-blue-500 mx-2">•</span>
+                <span class="mx-4 text-gray-400">Criando Experiências Digitais Inovadoras</span><span class="text-blue-500 mx-2">•</span>
+                <span class="mx-4 text-gray-400">.NET & C#</span><span class="text-blue-500 mx-2">•</span>
+                <span class="mx-4 text-gray-400">Pronto para o Próximo Desafio</span><span class="text-blue-500 mx-2">•</span>
+            </div>
+            <div class="marquee-content flex-shrink-0 flex items-center pr-8 text-xs sm:text-sm" aria-hidden="true">
+                <span class="mx-4 text-gray-400">Desenvolvedor Front-end</span><span class="text-blue-500 mx-2">•</span>
+                <span class="mx-4 text-gray-400">Soluções Criativas com Código e Design</span><span class="text-blue-500 mx-2">•</span>
+                <span class="mx-4 text-gray-400">Especialista em UI/UX</span><span class="text-blue-500 mx-2">•</span>
+                <span class="mx-4 text-gray-400">React & TypeScript</span><span class="text-blue-500 mx-2">•</span>
+                <span class="mx-4 text-gray-400">Criando Experiências Digitais Inovadoras</span><span class="text-blue-500 mx-2">•</span>
+                <span class="mx-4 text-gray-400">.NET & C#</span><span class="text-blue-500 mx-2">•</span>
+                <span class="mx-4 text-gray-400">Pronto para o Próximo Desafio</span><span class="text-blue-500 mx-2">•</span>
+            </div>
+        </div>
+    </footer>
+
+    <button id="music-toggle-btn" class="fixed bottom-20 right-5 z-50 w-12 h-12 bg-gray-800/50 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-gray-700/70 transition-colors">
         <svg id="sound-off-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
         <svg id="sound-on-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
     </button>

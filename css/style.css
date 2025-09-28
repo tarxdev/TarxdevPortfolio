@@ -327,3 +327,27 @@ header {
         transform: translateX(calc(-50%));
     }
 }
+
+/* ADICIONADO PARA O RODAPÉ FIXO */
+#page-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+
+/* --- AJUSTES DE RESPONSIVIDADE --- */
+@media (max-width: 640px) {
+    /* Diminui os logos em telas pequenas */
+    #tech-logo-loop {
+      --logo-height: 60px;
+      --gap: 2rem;
+    }
+
+    /* Diminui o espaçamento entre os cards */
+    .card-grid {
+        gap: 1rem;
+    }
+}

@@ -202,14 +202,8 @@ const allArticles = [
     { title: 'Dominando o async/await em JavaScript', publication: 'Medium', image: 'https://placehold.co/600x400/1e293b/94a3b8?text=Artigo+JS', link: '#' },
 ];
 
+// ARRAY DE LOGOS OTIMIZADO (NÃO PRECISA REPETIR)
 const allTechLogos = [
-  { src: "img/react.png", alt: "React Native" },
-  { src: "img/angular.png", alt: "Angular" },
-  { src: "img/Typescript.png", alt: "TypeScript" },
-  { src: "img/vue.png", alt: "Vue" },
-  { src: "img/js.png", alt: "JavaScript" },
-  { src: "img/html.png", alt: "HTML5" },
-  { src: "img/css.png", alt: "CSS3" },
   { src: "img/react.png", alt: "React Native" },
   { src: "img/angular.png", alt: "Angular" },
   { src: "img/Typescript.png", alt: "TypeScript" },
@@ -220,10 +214,6 @@ const allTechLogos = [
 ];
 
 // --- FUNÇÕES DE GERAÇÃO DE CONTEÚDO ---
-
-/**
- * Cria o HTML para um único card de projeto, certificado ou artigo.
- */
 function createItemCardHTML(item) {
     const subtext = item.institution || item.publication || item.description || 'Clique para ver mais';
     const buttonText = item.link.includes('github') ? 'Ver no GitHub' : (item.publication ? 'Ler Artigo' : 'Ver Credencial');
@@ -241,28 +231,21 @@ function createItemCardHTML(item) {
     `;
 }
 
-/**
- * Popula um container com um grid de cards.
- */
 function populateGrid(container, items) {
     if (!container || !items || items.length === 0) return;
     container.innerHTML = items.map(item => createItemCardHTML(item)).join('');
 }
 
-
-/**
- * Configura o letreiro de logos infinito.
- */
 function setupLogoScroller(container, logos) {
     if (!container || !logos || logos.length === 0) return;
 
+    // A função agora duplica o conteúdo para a animação
     const listContent = logos.map(item => `
         <div class="logo-scroller__item">
             <img src="${item.src}" alt="${item.alt}" draggable="false" />
         </div>
     `).join('');
 
-    // ESTRUTURA FINAL: Uma única faixa que contém a lista de logos DUAS VEZES.
     container.innerHTML = `
         <div class="logo-scroller__track">
             ${listContent}
@@ -275,18 +258,25 @@ function setupLogoScroller(container, logos) {
 // --- LÓGICA EXECUTADA AO CARREGAR A PÁGINA ---
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- LÓGICA DA MÚSICA DE FUNDO ---
+    // --- LÓGICA DA MÚSICA DE FUNDO (CÓDIGO NOVO E MAIS ROBUSTO) ---
     const audio = document.getElementById('background-audio');
     const musicToggleBtn = document.getElementById('music-toggle-btn');
     if (musicToggleBtn && audio) {
         const soundOffIcon = document.getElementById('sound-off-icon');
         const soundOnIcon = document.getElementById('sound-on-icon');
         audio.volume = 0.2;
+
         musicToggleBtn.addEventListener('click', () => {
             if (audio.paused) {
-                audio.play();
-                soundOffIcon.classList.add('hidden');
-                soundOnIcon.classList.remove('hidden');
+                const playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(_ => {
+                        soundOffIcon.classList.add('hidden');
+                        soundOnIcon.classList.remove('hidden');
+                    }).catch(error => {
+                        console.error("Erro ao tocar a música:", error);
+                    });
+                }
             } else {
                 audio.pause();
                 soundOnIcon.classList.add('hidden');
