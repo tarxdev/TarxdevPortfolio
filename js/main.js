@@ -205,7 +205,7 @@ const allArticles = [
 const allTechLogos = [
   { src: "img/react.png", alt: "React Native" },
   { src: "img/angular.png", alt: "Angular" },
-  { src: "img/Typescript.png", alt: "TypeScript" },
+  { src: "img/TypeScript.png", alt: "TypeScript" },
   { src: "img/vue.png", alt: "Vue" },
   { src: "img/js.png", alt: "JavaScript" },
   { src: "img/html.png", alt: "HTML5" },
