@@ -205,7 +205,7 @@ const allArticles = [
 const allTechLogos = [
   { src: "img/react.png", alt: "React Native" },
   { src: "img/angular.png", alt: "Angular" },
-  { src: "img/TypeScript.png", alt: "TypeScript" },
+  { src: "img/Typescript.png", alt: "TypeScript" },
   { src: "img/vue.png", alt: "Vue" },
   { src: "img/js.png", alt: "JavaScript" },
   { src: "img/html.png", alt: "HTML5" },
@@ -217,10 +217,14 @@ function createItemCardHTML(item) {
     const subtext = item.institution || item.publication || item.description || 'Clique para ver mais';
     const buttonText = item.link.includes('github') ? 'Ver no GitHub' : (item.publication ? 'Ler Artigo' : 'Ver Credencial');
     const truncatedSubtext = subtext.length > 150 ? subtext.substring(0, 150) + '...' : subtext;
+    const imageUrl = item.image || item.video;
 
+    // A estrutura foi simplificada, removendo o style do container da imagem
     return `
         <article>
-            <img src="${item.image || item.video}" alt="Imagem de ${item.title}">
+            <div class="card-image-container">
+                <img src="${imageUrl}" alt="Imagem de ${item.title}">
+            </div>
             <h2>${item.title}</h2>
             <div>
                 <p>${truncatedSubtext}</p> 
