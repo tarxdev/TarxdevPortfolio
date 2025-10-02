@@ -183,10 +183,10 @@ if (header) {
 
 // --- DADOS DO PORTFÓLIO ---
 const allCertificates = [
-    { title: 'Formação .NET Developer', institution: 'Digital Innovation One (DIO)', image: 'https://i.ibb.co/gb70xyVm/Captura-de-tela-18-7-2025-234143.jpg', link: '#' },
-    { title: 'Arquiteto de Soluções AWS', institution: 'Digital Innovation One (DIO)', image: 'https://placehold.co/1920x1080/111111/60a5fa?text=Certificado+AWS', link: '#' },
-    { title: 'JavaScript Moderno (ES6+)', institution: 'Udemy', image: 'https://placehold.co/1920x1080/111111/60a5fa?text=Certificado+JS', link: '#' },
-    { title: 'Docker para Desenvolvedores', institution: 'Alura', image: 'https://placehold.co/1920x1080/111111/60a5fa?text=Certificado+Docker', link: '#' },
+    { title: 'Formação .NET Developer', institution: 'Digital Innovation One (DIO)', image: 'https://i.ibb.co/gb70xyVm/Captura-de-tela-18-7-2025-234143.jpg', link: 'https://hermes.dio.me/certificates/EQSTAIOI.pdf' },
+    { title: 'Akad - Fullstack Developer', institution: 'Digital Innovation One (DIO)', image: 'https://i.ibb.co/xKR6Ly8x/L2-Nlcn-Rp-Zmlj-YXRlcy9jb3-Zlci9-FVVh-RTU9-MWS5qc-Gc.webp', link: 'https://hermes.dio.me/certificates/EUXQMOLY.pdf' },
+    { title: 'Desenvolvimento avançado em Java', institution: 'Digital Innovation One (DIO)', image: 'https://i.ibb.co/7J5YcHCw/crtf.png', link: 'https://hermes.dio.me/certificates/BEVLH8GM.pdf' },
+    { title: 'Docker para Desenvolvedores', institution: 'Estácio', image: 'https://i.ibb.co/FfJZh9X/estaciocert.png', link: '' },
 ];
 
 const allProjects = [
