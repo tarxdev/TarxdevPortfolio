@@ -186,7 +186,7 @@ const allCertificates = [
     { title: 'Formação .NET Developer', institution: 'Digital Innovation One (DIO)', image: 'https://i.ibb.co/gb70xyVm/Captura-de-tela-18-7-2025-234143.jpg', link: 'https://hermes.dio.me/certificates/EQSTAIOI.pdf' },
     { title: 'Akad - Fullstack Developer', institution: 'Digital Innovation One (DIO)', image: 'https://i.ibb.co/xKR6Ly8x/L2-Nlcn-Rp-Zmlj-YXRlcy9jb3-Zlci9-FVVh-RTU9-MWS5qc-Gc.webp', link: 'https://hermes.dio.me/certificates/EUXQMOLY.pdf' },
     { title: 'Desenvolvimento avançado em Java', institution: 'Digital Innovation One (DIO)', image: 'https://i.ibb.co/7J5YcHCw/crtf.png', link: 'https://hermes.dio.me/certificates/BEVLH8GM.pdf' },
-    { title: 'Docker para Desenvolvedores', institution: 'Estácio', image: 'https://i.ibb.co/FfJZh9X/estaciocert.png', link: '' },
+    { title: 'Lógica de Programação Utilizando Python', institution: 'Estácio', image: 'https://i.ibb.co/FfJZh9X/estaciocert.png', link: '' },
 ];
 
 const allProjects = [
@@ -207,7 +207,7 @@ const allTechLogos = [
   { src: "img/angular.png", alt: "Angular" },
   { src: "img/Typescript.png", alt: "TypeScript" },
   { src: "img/vue.png", alt: "Vue" },
-  { src: "img/js.png", alt: "JavaScript" },
+  { src: "img/js.png", alt: "Javascript" },
   { src: "img/html.png", alt: "HTML5" },
   { src: "img/css.png", alt: "CSS3" },
 ];
